@@ -1,9 +1,21 @@
-water_products_app/
+water_product_review/
+│
 ├── app.py
 ├── models.py
 ├── config.py
+├── requirements.txt
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
 ├── templates/
+│   ├── register.html
+│   ├── login.html
+│   ├── add_review.html
 │   ├── index.html
-│   └── review.html
-└── static/
-    └── styles.css
+│   └── base.html
+└── README.md
+
+psql -U gitpod -d water_products_db

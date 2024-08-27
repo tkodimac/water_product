@@ -18,3 +18,48 @@ input, textarea {
     width: 100%;
     box-sizing: border-box;
 }
+body {
+    background: linear-gradient(to bottom, #e0f7fa, #80deea);
+    font-family: 'Arial', sans-serif;
+    color: #006064;
+}
+
+h2 {
+    color: #00838f;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #006064;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #00838f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #006064;
+}
+
+.navbar {
+    background-color: #004d40;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: #80deea;
+}
+
+.container {
+    margin-top: 50px;
+}

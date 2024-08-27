@@ -1,20 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>Water Products</title>
-</head>
-<body>
-    <h1>Water Products Reviews</h1>
-    <form action="/add_review" method="POST">
-        <input type="text" name="name" placeholder="Product Name" required>
-        <textarea name="description" placeholder="Description" required></textarea>
-        <input type="number" name="volume" placeholder="Volume (liters)" required>
-        <textarea name="review" placeholder="Write your review" required></textarea>
-        <input type="hidden" name="user_id" value="1"> <!-- Example User ID -->
-        <button type="submit">Submit Review</button>
-    </form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}All Water Product Reviews{% endblock %}
+
+{% block content %}
+<h2>All Water Product Reviews</h2>
+<div class="row">
+    {% for review in reviews %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ review.name }}</h5>
+                <p class="card-text">{{ review.description }}</p>
+                <p class="card-text"><strong>{{ review.ml }} ml</strong></p>
+                <p class="card-text">Review: {{ review.review }}</p>
+                <p class="card-text"><small>Submitted by: {{ review.user.username }}</small></p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<a href="{{ url_for('add_review') }}" class="btn btn-primary">Add a Review</a>
+{% endblock %}
