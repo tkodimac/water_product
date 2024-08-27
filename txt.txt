@@ -18,4 +18,6 @@ water_product_review/
 │   └── base.html
 └── README.md
 
-psql -U gitpod -d water_products_db
+psql -U gitpod -d water_products_review_db
+
+CREATE DATABASE water_products_review_db;
